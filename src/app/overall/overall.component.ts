@@ -82,6 +82,13 @@ export class OverallComponent implements OnInit {
               stacked: false,
             },
           ],
+          xAxes: [
+            {
+              display: false,
+              ticks: {
+                display: false //this will remove only the label
+              }
+            }]
         },
       },
     });

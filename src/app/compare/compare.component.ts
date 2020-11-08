@@ -17,6 +17,7 @@ export class CompareComponent implements OnInit {
   period = Helper.period;
   queryForm: FormGroup
   dataLoaded = false;
+  compareChart: Chart;
 
 
   constructor(
@@ -96,7 +97,10 @@ export class CompareComponent implements OnInit {
   }
 
   getGraph() {
-    var myChart = new Chart('comparebarchart', {
+    if (this.compareChart) {
+      this.compareChart.destroy();
+    }
+    this.compareChart = new Chart('comparebarchart', {
       type: 'bar',
       data: {
         labels: ['Cases', 'Critical', 'Deaths', 'Recovered'],
