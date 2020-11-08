@@ -60,7 +60,20 @@ export class CompareComponent implements OnInit {
   onCreate() {
     let country1 = this.queryForm.get('country1').value;
     let country2 = this.queryForm.get('country2').value;
-    this._covidService.getCountryData(country1).subscribe((data) => {
+    let yesterday = false;
+    let lastTwodays = false;
+    switch(this.queryForm.get('period').value){
+      case 'Yesterday': yesterday = true;
+        break;
+
+      case 'Last Two Days': lastTwodays = true;
+        break;
+
+      default:
+        break;
+    }
+    this._covidService.getCountryData(country1,yesterday,lastTwodays)
+    .subscribe((data) => {
       console.log(data);
       if (data != undefined && data != null) {
         this.dataLoaded = true;
@@ -69,7 +82,8 @@ export class CompareComponent implements OnInit {
         this.dataLoaded = false;
       }
     });
-    this._covidService.getCountryData(country2).subscribe((data) => {
+    this._covidService.getCountryData(country2,yesterday,lastTwodays)
+    .subscribe((data) => {
       console.log(data);
       if (data != undefined && data != null) {
         this.dataLoaded = true;

@@ -16,8 +16,13 @@ export class CovidService {
     return this.http.get(environment.covid_endpoint + '/all')
   }
 
-  getCountryData(country) {
-    return this.http.get(environment.covid_endpoint + '/countries/' + country)
+  getCountryData(country,yesterday=false,twoDaysAgo=false) {
+    let _httpOptions = {
+      params: new HttpParams()
+      .append('yesterday',yesterday.toString())
+      .append('twoDaysAgo',twoDaysAgo.toString())
+    }
+    return this.http.get(environment.covid_endpoint + '/countries/' + country,_httpOptions)
   }
 
   getHistData() {

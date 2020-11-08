@@ -8,7 +8,11 @@
                 <div class="column-67">
                     <div>Active Cases</div>
                     <div *ngIf="dataLoaded" class="m-t-20">{{allData.active}}</div>
-                    <mat-spinner [diameter]="25" *ngIf="!dataLoaded"></mat-spinner>
+                    <mat-spinner 
+                            [diameter]="25" 
+                            style="margin:20px auto 0px auto;" 
+                            mode="indeterminate" 
+                            *ngIf="!dataLoaded"></mat-spinner>
                 </div>
             </div>
         </mat-card>
@@ -23,7 +27,11 @@
                     <div class="column-67 m-t-20">
                         <div>Today's Cases</div>
                         <div *ngIf="dataLoaded" class="m-t-20 cases">{{allData.todayCases}}</div>
-                        <mat-spinner [diameter]="25" *ngIf="!dataLoaded"></mat-spinner>
+                        <mat-spinner 
+                            [diameter]="25" 
+                            style="margin:20px auto 0px auto;" 
+                            mode="indeterminate" 
+                            *ngIf="!dataLoaded"></mat-spinner>
                     </div>
                 </div>
             </mat-card>
@@ -37,7 +45,11 @@
                     <div class="column-67 m-t-20">
                         <div>Today's Deaths</div>
                         <div *ngIf="dataLoaded" class="m-t-20 deaths">{{allData.todayDeaths}}</div>
-                        <mat-spinner [diameter]="25" *ngIf="!dataLoaded"></mat-spinner>
+                        <mat-spinner 
+                            [diameter]="25" 
+                            style="margin:20px auto 0px auto;" 
+                            mode="indeterminate" 
+                            *ngIf="!dataLoaded"></mat-spinner>
                     </div>
                 </div>
             </mat-card>
@@ -51,8 +63,11 @@
                     <div class="column-67 m-t-20">
                         <div>Today's Recovered</div>
                         <div *ngIf="dataLoaded" class="m-t-20 recovered">{{allData.todayRecovered}}</div>
-                        <mat-spinner [diameter]="25" *ngIf="!dataLoaded"></mat-spinner>
-                    </div>
+                        <mat-spinner 
+                        [diameter]="25" 
+                        style="margin:20px auto 0px auto;" 
+                        mode="indeterminate" 
+                        *ngIf="!dataLoaded"></mat-spinner>                    </div>
                 </div>
             </mat-card>
         </div>
@@ -65,7 +80,11 @@
                     <div class="column-67 m-t-20">
                         <div>Total Cases</div>
                         <div *ngIf="dataLoaded" class="m-t-20 cases">{{allData.cases}}</div>
-                        <mat-spinner [diameter]="25" *ngIf="!dataLoaded"></mat-spinner>
+                        <mat-spinner 
+                            [diameter]="25" 
+                            style="margin:20px auto 0px auto;" 
+                            mode="indeterminate" 
+                            *ngIf="!dataLoaded"></mat-spinner>
                     </div>
                 </div>
             </mat-card>
@@ -79,7 +98,11 @@
                     <div class="column-67 m-t-20">
                         <div>Total Deaths</div>
                         <div *ngIf="dataLoaded" class="m-t-20 deaths">{{allData.deaths}}</div>
-                        <mat-spinner [diameter]="25" *ngIf="!dataLoaded"></mat-spinner>
+                        <mat-spinner 
+                            [diameter]="25" 
+                            style="margin:20px auto 0px auto;" 
+                            mode="indeterminate" 
+                            *ngIf="!dataLoaded"></mat-spinner>
                     </div>
                 </div>
             </mat-card>
@@ -93,7 +116,11 @@
                     <div class="column-67 m-t-20">
                         <div>Total Recovered</div>
                         <div *ngIf="dataLoaded" class="m-t-20 recovered">{{allData.recovered}}</div>
-                        <mat-spinner [diameter]="25" *ngIf="!dataLoaded"></mat-spinner>
+                        <mat-spinner 
+                            [diameter]="25" 
+                            style="margin:20px auto 0px auto;" 
+                            mode="indeterminate" 
+                            *ngIf="!dataLoaded"></mat-spinner>
                     </div>
                 </div>
             </mat-card>
