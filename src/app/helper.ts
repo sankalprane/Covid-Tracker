@@ -20,11 +20,7 @@ export class Helper{
             "code": "DZ"
         },
         {
-            "name": "American Samoa",
-            "code": "AS"
-        },
-        {
-            "name": "AndorrA",
+            "name": "Andora",
             "code": "AD"
         },
         {
@@ -34,10 +30,6 @@ export class Helper{
         {
             "name": "Anguilla",
             "code": "AI"
-        },
-        {
-            "name": "Antarctica",
-            "code": "AQ"
         },
         {
             "name": "Antigua and Barbuda",
@@ -120,16 +112,8 @@ export class Helper{
             "code": "BW"
         },
         {
-            "name": "Bouvet Island",
-            "code": "BV"
-        },
-        {
             "name": "Brazil",
             "code": "BR"
-        },
-        {
-            "name": "British Indian Ocean Territory",
-            "code": "IO"
         },
         {
             "name": "Brunei Darussalam",
@@ -920,7 +904,7 @@ export class Helper{
             "code": "GB"
         },
         {
-            "name": "United States",
+            "name": "United States Of America",
             "code": "US"
         },
         {
