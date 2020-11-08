@@ -1,0 +1,102 @@
+<div class="m-t-20">
+    <div class="active-heading m-t-20">
+        <mat-card>
+            <div class="row">
+                <div class="column-33">
+                    <img src="../../assets/images/corona.gif" width="45" height="45" alt="">
+                </div>
+                <div class="column-67">
+                    <div>Active Cases</div>
+                    <div *ngIf="dataLoaded" class="m-t-20">{{allData.active}}</div>
+                    <mat-spinner [diameter]="25" *ngIf="!dataLoaded"></mat-spinner>
+                </div>
+            </div>
+        </mat-card>
+    </div>
+    <div class="flex-container m-t-20">
+        <div class="chip">
+            <mat-card>
+                <div class="row">
+                    <div class="column-33">
+                        <img src="../../assets/images/todaysick.png" width="90" height="90" alt="">
+                    </div>
+                    <div class="column-67 m-t-20">
+                        <div>Today's Cases</div>
+                        <div *ngIf="dataLoaded" class="m-t-20 cases">{{allData.todayCases}}</div>
+                        <mat-spinner [diameter]="25" *ngIf="!dataLoaded"></mat-spinner>
+                    </div>
+                </div>
+            </mat-card>
+        </div>
+        <div class="chip">
+            <mat-card>
+                <div class="row">
+                    <div class="column-33">
+                        <img src="../../assets/images/todaycoffin.png" width="90" height="90" alt="">
+                    </div>
+                    <div class="column-67 m-t-20">
+                        <div>Today's Deaths</div>
+                        <div *ngIf="dataLoaded" class="m-t-20 deaths">{{allData.todayDeaths}}</div>
+                        <mat-spinner [diameter]="25" *ngIf="!dataLoaded"></mat-spinner>
+                    </div>
+                </div>
+            </mat-card>
+        </div>
+        <div class="chip">
+            <mat-card>
+                <div class="row">
+                    <div class="column-33">
+                        <img src="../../assets/images/todayrecovered.png" width="90" height="90" alt="">
+                    </div>
+                    <div class="column-67 m-t-20">
+                        <div>Today's Recovered</div>
+                        <div *ngIf="dataLoaded" class="m-t-20 recovered">{{allData.todayRecovered}}</div>
+                        <mat-spinner [diameter]="25" *ngIf="!dataLoaded"></mat-spinner>
+                    </div>
+                </div>
+            </mat-card>
+        </div>
+        <div class="chip">
+            <mat-card>
+                <div class="row">
+                    <div class="column-33">
+                        <img src="../../assets/images/totalsick.png" width="90" height="90" alt="">
+                    </div>
+                    <div class="column-67 m-t-20">
+                        <div>Total Cases</div>
+                        <div *ngIf="dataLoaded" class="m-t-20 cases">{{allData.cases}}</div>
+                        <mat-spinner [diameter]="25" *ngIf="!dataLoaded"></mat-spinner>
+                    </div>
+                </div>
+            </mat-card>
+        </div>
+        <div class="chip">
+            <mat-card>
+                <div class="row">
+                    <div class="column-33">
+                        <img src="../../assets/images/coffin.png" width="90" height="90" alt="">
+                    </div>
+                    <div class="column-67 m-t-20">
+                        <div>Total Deaths</div>
+                        <div *ngIf="dataLoaded" class="m-t-20 deaths">{{allData.deaths}}</div>
+                        <mat-spinner [diameter]="25" *ngIf="!dataLoaded"></mat-spinner>
+                    </div>
+                </div>
+            </mat-card>
+        </div>
+        <div class="chip">
+            <mat-card>
+                <div class="row">
+                    <div class="column-33">
+                        <img src="../../assets/images/totalrecovered.png" width="90" height="90" alt="">
+                    </div>
+                    <div class="column-67 m-t-20">
+                        <div>Total Recovered</div>
+                        <div *ngIf="dataLoaded" class="m-t-20 recovered">{{allData.recovered}}</div>
+                        <mat-spinner [diameter]="25" *ngIf="!dataLoaded"></mat-spinner>
+                    </div>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div>

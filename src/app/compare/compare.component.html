@@ -1,0 +1,63 @@
+<div class="query-container">
+    <div class="row">
+        <div class="col-xs-4">
+            <mat-card>
+                <form [formGroup]="queryForm">
+                    <div>
+                        <mat-form-field>
+                            <mat-select placeholder="Country 1" panelClass="gen-panel"
+                                [formControl]="queryForm.controls['country1']">
+                                <mat-form-field class="country-searchField" appearance="outline"
+                                    style="padding: 5px 8px 5px 8px;font-size: 13px">
+                                    <input autocomplete="off" name="search" formControlName="searchTerm1"
+                                        (keyup)="filterCountries($event.target.value,'country-list','gen-panel');"
+                                        (keydown)="$event.stopPropagation()" matInput placeholder="Search Country">
+                                    <mat-icon matSuffix style="color:#24539f;position: relative;top: 0.1em;">search
+                                    </mat-icon>
+                                </mat-form-field>
+                                <div class="panel-optn" style="max-height: 170px;">
+                                    <mat-option value="{{country.name}}" class="country-list"
+                                        *ngFor="let country of allCountries">{{country.name}}</mat-option>
+                                </div>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="m-t-20">
+                        <mat-form-field>
+                            <mat-select placeholder="Country 2" panelClass="gen-panel"
+                                [formControl]="queryForm.controls['country2']">
+                                <mat-form-field class="country-searchField" appearance="outline"
+                                    style="padding: 5px 8px 5px 8px;font-size: 13px">
+                                    <input autocomplete="off" name="search" formControlName="searchTerm2"
+                                        (keyup)="filterCountries($event.target.value,'country-list','gen-panel');"
+                                        (keydown)="$event.stopPropagation()" matInput placeholder="Search Country">
+                                    <mat-icon matSuffix style="color:#24539f;position: relative;top: 0.1em;">search
+                                    </mat-icon>
+                                </mat-form-field>
+                                <div class="panel-optn" style="max-height: 170px;">
+                                    <mat-option value="{{country.name}}" class="country-list"
+                                        *ngFor="let country of allCountries">{{country.name}}</mat-option>
+                                </div>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="m-t-20">
+                        <mat-form-field>
+                            <mat-select panelClass="period-panel" placeholder="Period"
+                                [formControl]="queryForm.controls['period']">
+                                <mat-option *ngFor="let time of period" value="{{time}}">{{time}}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="m-t-20">
+                        <button mat-raised-button (click)="getData()">Get Data</button>
+                    </div>
+                </form>
+            </mat-card>
+        </div>
+        <div class="col-xs-8">
+            <canvas id="comparebarchart"></canvas>
+        </div>
+    </div>
+</div>
